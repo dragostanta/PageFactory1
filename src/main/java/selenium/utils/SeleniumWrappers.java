@@ -33,11 +33,19 @@ public class SeleniumWrappers extends BaseTest{
 			System.out.println("Element not found " + element.getAttribute("outerHTML"));
 			throw new TestException(e.getMessage());
 			
-		}
-
-		
+		}	
 	}
 	
+	
+	public void sendKeys(WebElement element, String textToWrite) {
+		
+		System.out.println("Called method <sendKeys> on element " + element);
+		WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(element));
+		element.clear();
+		element.sendKeys(textToWrite);
+		
+	}
 	
 	
 }

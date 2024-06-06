@@ -7,3 +7,4 @@ target/
 test-output/
 credentials.properties
 .idea/
+login.properties
