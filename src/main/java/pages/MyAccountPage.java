@@ -28,6 +28,8 @@ public class MyAccountPage extends SeleniumWrappers{
 	@FindBy(xpath = "//div[@class='woocommerce-MyAccount-content']")
 	public WebElement myAccountContent;
 	
+	@FindBy(linkText = "Log out")
+	public WebElement logoutBtn;
 	
 	public void loginInApp(String username, String password) {
 		
