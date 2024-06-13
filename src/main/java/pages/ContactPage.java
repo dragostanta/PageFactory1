@@ -28,6 +28,9 @@ public class ContactPage extends SeleniumWrappers{
 
 	@FindBy(xpath = "//input[@value='Send Message']")
 	public WebElement submitBtn;
+	
+	@FindBy(css = "div[class='wpcf7-response-output']")
+	public WebElement sentMsgText;
 
 	
 	
